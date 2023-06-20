@@ -8,7 +8,7 @@ const TodoReducer = (state = intialdata, action) => {
 
     if (action.type == Adding) {
 
-        return [...state, action.payload]
+        return [  ...state, action.payload   ]
 
     }
 

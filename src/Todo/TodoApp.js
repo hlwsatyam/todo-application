@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 const ToDo = () => {
 
 
-    const todos = useSelector((sta) => sta);
+    const todos = useSelector((S) => S);
 
 
 
@@ -25,7 +25,7 @@ const ToDo = () => {
         }
     }
 
-console.log(  Math.random()  )
+    console.log(Math.random())
 
 
 
@@ -35,7 +35,7 @@ console.log(  Math.random()  )
 
     return (
 
-        <div className='container-fluid '  >
+        <div className='container-md'  >
             <div className='header p-5   ' > <p className='text-center  header  '>T❤-DO-NOW</p></div>
             <div className='text-center  search m-5 '  >
                 <input placeholder=' type...'
@@ -44,8 +44,6 @@ console.log(  Math.random()  )
                 /><button onClick={() => btnclick()}  >Add Task</button>
             </div>
 
-
-
             <ul>
 
                 {
@@ -53,10 +51,10 @@ console.log(  Math.random()  )
 
                         val =>
                             <li> <div className='  show m-2 text-center '  >
-                                <p style={{ paddingTop: "15px" }}  > {val.name} | {val.time}  
-                                  </p><button onClick={() => deletebtn((val.id))}     > REMOVE &#xe872;</button>
+                                <p style={{ paddingTop: "15px" }}  > {val.name} | {val.time}
+                                </p><button onClick={() => deletebtn((val.id))}     > REMOVE &#xe872;</button>
                             </div></li>
-                            
+
                     )
                 }
             </ul>
